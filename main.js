@@ -81,11 +81,14 @@ function animate() {
       i,
       //getting and elongating our sineWaves effect ; nice and smooth
       wave.y +
-        Math.sin(i * wave.length + increment) * wave.amplitude * Math.sin(increment)
+        Math.sin(i * wave.length + increment) *
+          wave.amplitude *
+          Math.sin(increment)
     );
   }
 
   //This is what dynaically change the color of the wave
+  //Math.abs(strokeColor.h * Math.sin(increment)) -> This will allow us to play between the extreme values
   c.strokeStyle = `hsl(${Math.abs(strokeColor.h * Math.sin(increment))}, ${
     strokeColor.s
   }%, ${strokeColor.l}%)`;
