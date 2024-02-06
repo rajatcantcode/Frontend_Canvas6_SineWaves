@@ -88,7 +88,7 @@ function animate() {
   }
 
   //This is what dynaically change the color of the wave
-  //Math.abs(strokeColor.h * Math.sin(increment)) -> This will allow us to play between the extreme values
+  //Math.abs(strokeColor.h * Math.sin(increment)) -> This will allow us to have only positive values as negative values don't represent any color
   c.strokeStyle = `hsl(${Math.abs(strokeColor.h * Math.sin(increment))}, ${
     strokeColor.s
   }%, ${strokeColor.l}%)`;
