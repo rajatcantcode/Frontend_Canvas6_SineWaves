@@ -80,7 +80,8 @@ function animate() {
     c.lineTo(
       i,
       //getting and elongating our sineWaves effect ; nice and smooth
-      wave.y + Math.sin(i * wave.length + increment) * wave.amplitude
+      wave.y +
+        Math.sin(i * wave.length + increment) * wave.amplitude * Math.sin(increment)
     );
   }
 
